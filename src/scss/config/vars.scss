@@ -1,7 +1,7 @@
 $maxWidth: 1920; // максимальная ширина страницы
 $minWidth: 320; // минимальная ширина телефона
 $maxWidthContainer: 1200; // ширина контейнера с учетом padding слева и справа
-$containerWidth: 1160; // ширина контейнера из макета
+$containerWidth: 1440; // ширина контейнера из макета
 
 $mainOffset: 15; // отступы безопасности для контейнера
 $mainFont: ''; // !указать здесь основное семейство шрифта
@@ -12,10 +12,29 @@ $footerHeight: 100;
 
 $mainRadius: rem(10);
 
+// Grayscale
 $whiteColor: #fff;
-$blackColor: #131313;
+$blackColor: #000;
 $grayColor: #6f6f6f;
 $redColor: #ff4040;
+$titleActiveColor: #14142b;
+$bodyColor: #4E4b66;
+$labelColor: #6e7191;
+$placeholderColor: #a0a3bd;
+$lineColor: #d9dbe9;
+$inputBGColor: #eff0f6;
+$BGColor: #f7f7fc;
+$OffWhiteColor: #fcfcfc;
+
+// Primary
+$defaultBlueColor: #5F2EEA;
+$darkBlueColor: #5F2EEA;
+$darkModeBlueColor: #5F2EEA;
+$lightBlueColor: #5F2EEA;
+$BGBlueColor: #5F2EEA;
+
+
+
 
 $firstAccentColor: $blackColor;
 $secondAccentColor: $redColor;
