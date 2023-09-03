@@ -1,0 +1,48 @@
+.sidenav {
+  height: 100%; /* 100% Полный рост */
+  width: 0; /* 0 ширина - измените это с помощью JavaScript */
+  position: fixed; /* Оставаться на месте */
+  z-index: 10; /* Оставайтесь на вершине */
+  top: 0; /* Оставайтесь на вершине */
+  left: 0;
+  background-color: $darkBlueColor; 
+  overflow-x: hidden; /* Отключить горизонтальную прокрутку */
+  transition: 0.5s; /* 0.5 секунд эффект перехода, чтобы скользить в sidenav */
+  
+  &__box {
+    border-bottom: rem(1) solid $darkModeBlueColor;
+    height: rem($headerHeight);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: rem(45);
+    padding-right: rem(70);
+  }
+  &__close{
+    display: block;
+    font-size: rem(36);
+    color: $BGBlueColor;
+  }
+  &__link {
+    display: block;
+    color: $BGBlueColor;
+    font-size: rem(20);
+    font-weight: 600;
+    line-height: rem(32); 
+    letter-spacing: rem(0.75);
+    padding: rem(30) 0 rem(30) rem(93);
+    transition: all 0.3s;
+    &:hover{
+      background-color: $defaultBlueColor;
+    }
+  }
+  &__logo {
+    color: $OffWhiteColor;
+    font-size: rem(34.375);
+    font-weight: 700;
+    line-height: rem(55);  
+  }
+  &__links {
+    
+  }
+}

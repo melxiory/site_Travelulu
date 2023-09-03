@@ -1,6 +1,7 @@
 .header {
   width: 100%;
   transition: all 0.3s ease-in-out;
+  border-bottom: rem(1) solid $lineColor;
 
   // .header__container
   &__container {
@@ -14,6 +15,7 @@
   &__logo{
     font-size: rem(34.375);
     line-height: rem(55);
+    font-weight: 700;
   }
 }
 
@@ -52,20 +54,20 @@
     top: calc(50% - rem(2));
   }
 
-  .menu-open & {
-    span {
-      width: 0;
-    }
+  // .menu-open & {
+  //   span {
+  //     width: 0;
+  //   }
 
-    &::before {
-      top: calc(50% - rem(2));
-      transform: rotate(-45deg);
-    }
+  //   &::before {
+  //     top: calc(50% - rem(2));
+  //     transform: rotate(-45deg);
+  //   }
 
-    &::after {
-      bottom: calc(50% - rem(2));
-      transform: rotate(45deg);
-    }
-  }
+  //   &::after {
+  //     bottom: calc(50% - rem(2));
+  //     transform: rotate(45deg);
+  //   }
+  // }
 }
 
