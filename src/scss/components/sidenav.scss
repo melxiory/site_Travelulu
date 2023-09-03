@@ -4,14 +4,14 @@
   position: fixed; /* Оставаться на месте */
   z-index: 10; /* Оставайтесь на вершине */
   top: 0; /* Оставайтесь на вершине */
-  left: 0;
+  right: 0;
   background-color: $darkBlueColor; 
   overflow-x: hidden; /* Отключить горизонтальную прокрутку */
   transition: 0.5s; /* 0.5 секунд эффект перехода, чтобы скользить в sidenav */
   
   &__box {
     border-bottom: rem(1) solid $darkModeBlueColor;
-    height: rem($headerHeight);
+    height: rem($headerHeight + 1);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,8 +41,5 @@
     font-size: rem(34.375);
     font-weight: 700;
     line-height: rem(55);  
-  }
-  &__links {
-    
   }
 }

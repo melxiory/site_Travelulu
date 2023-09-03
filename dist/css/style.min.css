@@ -313,6 +313,51 @@ sup {
   top: calc(50% - 0.125rem);
 }
 
+.sidenav {
+  height: 100%; /* 100% Полный рост */
+  width: 0; /* 0 ширина - измените это с помощью JavaScript */
+  position: fixed; /* Оставаться на месте */
+  z-index: 10; /* Оставайтесь на вершине */
+  top: 0; /* Оставайтесь на вершине */
+  right: 0;
+  background-color: #2A00A2;
+  overflow-x: hidden; /* Отключить горизонтальную прокрутку */
+  transition: 0.5s; /* 0.5 секунд эффект перехода, чтобы скользить в sidenav */
+}
+.sidenav__box {
+  border-bottom: 0.0625rem solid #BCA4FF;
+  height: 5.5625rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2.8125rem;
+  padding-right: 4.375rem;
+}
+.sidenav__close {
+  display: block;
+  font-size: 2.25rem;
+  color: #F3EFFF;
+}
+.sidenav__link {
+  display: block;
+  color: #F3EFFF;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 2rem;
+  letter-spacing: 0.046875rem;
+  padding: 1.875rem 0 1.875rem 5.8125rem;
+  transition: all 0.3s;
+}
+.sidenav__link:hover {
+  background-color: #5F2EEA;
+}
+.sidenav__logo {
+  color: #fcfcfc;
+  font-size: 2.1484375rem;
+  font-weight: 700;
+  line-height: 3.4375rem;
+}
+
 .popup {
   position: fixed;
   inset: 0;
@@ -372,33 +417,21 @@ sup {
 }
 .accordion__item {
   /** Установить свои значения */
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  background-color: #2A00A2;
   transition: 0.3s ease-in-out;
-}
-.accordion__item:not(:first-of-type) {
-  border-top: 0;
-}
-.accordion__item:first-of-type {
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-}
-.accordion__item:last-of-type {
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
 }
 .accordion__item.open .accordion__header {
   /** Установить свои значения */
-  background-color: #e7f1ff;
-  color: #ff4040;
+  background-color: #5F2EEA;
 }
 .accordion__item.open .accordion__header:after {
   transform: rotate(0deg);
 }
 .accordion__item.open .accordion__content {
   height: max-content;
+  padding-left: 5.8125rem;
   /** Установить свои значения */
-  padding: 2.25rem 0.5rem;
+  padding: 2.25rem 0 2.25rem 5.8125rem;
 }
 .accordion__header {
   position: relative;
@@ -407,14 +440,19 @@ sup {
   justify-content: space-between;
   cursor: pointer;
   /** Установить свои значения */
-  padding: 0.5rem;
+  padding: 1.875rem 0 1.875rem 5.8125rem;
+  color: #F3EFFF;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 2rem;
+  letter-spacing: 0.046875rem;
   transition: background 0.3s ease-in-out;
 }
 .accordion__header:hover {
-  background: rgba(255, 255, 255, 0.02);
+  background-color: #5F2EEA;
 }
 .accordion__header:active {
-  background: rgba(255, 255, 255, 0.05);
+  background-color: #5F2EEA;
 }
 .accordion__header::after {
   content: "";
@@ -429,10 +467,11 @@ sup {
   transition: transform 0.6s ease-in-out;
 }
 .accordion__content {
+  background-color: #5F2EEA;
   height: 0;
   overflow: hidden;
+  padding-left: 5.8125rem;
   /** Установить свои значения */
-  padding: 0 0.5rem;
   transition: all 0.3s ease-in-out;
 }
 

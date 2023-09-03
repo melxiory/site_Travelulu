@@ -1,34 +1,18 @@
 .accordion {
   /** Установить свои значения */
-  $radius: 4;
   $icon-size: 24;
 
   // .accordion__item
   &__item {
     /** Установить свои значения */
-    background-color: #fff;
-    border: 1px solid rgba(#000, 12%);
+    background-color: $darkBlueColor;
     transition: 0.3s ease-in-out;
-
-    &:not(:first-of-type) {
-      border-top: 0;
-    }
-
-    &:first-of-type {
-      border-top-left-radius: rem($radius);
-      border-top-right-radius: rem($radius);
-    }
-
-    &:last-of-type {
-      border-bottom-right-radius: rem($radius);
-      border-bottom-left-radius: rem($radius);
-    }
+    
 
     &.open {
       .accordion__header {
         /** Установить свои значения */
-        background-color: #e7f1ff;
-        color: #ff4040;
+        background-color: $defaultBlueColor;
 
         &:after {
           transform: rotate(0deg);
@@ -37,9 +21,9 @@
 
       .accordion__content {
         height: max-content;
-
+        padding-left: rem(93);
         /** Установить свои значения */
-        padding: rem(36) rem(8);
+        padding: rem(36) 0 rem(36) rem(93);
       }
     }
   }
@@ -53,15 +37,20 @@
     cursor: pointer;
 
     /** Установить свои значения */
-    padding: rem(8);
+    padding: rem(30) 0 rem(30) rem(93);
+    color: $BGBlueColor;
+    font-size: rem(20);
+    font-weight: 600;
+    line-height: rem(32); 
+    letter-spacing: rem(0.75);
     transition: background 0.3s ease-in-out;
 
     &:hover {
-      background: rgba(#fff, 2%);
+      background-color: $defaultBlueColor;
     }
 
     &:active {
-      background: rgba(#fff, 5%);
+      background-color: $defaultBlueColor;
     }
 
     @include pseudocell(after, static) {
@@ -78,11 +67,13 @@
 
   // .accordion__content
   &__content {
+    background-color: $defaultBlueColor;
     height: 0;
     overflow: hidden;
+    padding-left: rem(93);
 
     /** Установить свои значения */
-    padding: 0 rem(8);
+    
     transition: all 0.3s ease-in-out;
   }
 }

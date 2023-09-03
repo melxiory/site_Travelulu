@@ -12,7 +12,6 @@
 
 import BaseHelpers from './helpers/BaseHelpers.js';
 import PopupManager from './modules/PopupManager';
-import BurgerMenu from './modules/BurgerMenu';
 import Accordion from './modules/Accordion.js';
 
 BaseHelpers.checkWebpSupport();
@@ -34,10 +33,7 @@ BaseHelpers.headerFixed();
  * */
 new PopupManager();
 
-/**
- *  Модуль для работы с меню (Бургер)
- * */
-new BurgerMenu().init();
+
 
 /**
  *  Библиотека для анимаций
@@ -56,3 +52,25 @@ new Accordion('.accordion', {
   defaultOpen: [], // [0,1]
   collapsedClass: 'open',
 });
+
+
+/* Установить ширину боковой панели с шириной 250 пикселей и следующий */
+const sidenav = document.getElementById("mySidenav")
+const openBtn = document.querySelector('.icon-menu')
+
+openBtn.addEventListener('click', 
+  () => {
+    sidenav.style.width = "480px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+)
+
+/* Установите ширину боковой навигации в 0 */
+const closeBtn = document.querySelector('.sidenav__close')
+
+closeBtn.addEventListener('click', 
+  () => {
+    sidenav.style.width = "0";
+    document.body.style.backgroundColor = "white"
+  }
+)
