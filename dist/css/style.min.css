@@ -3,17 +3,31 @@
 * Подключение шрифтов локально из папки "./src/fonts"
 */
 @font-face {
-  font-family: Inter;
+  font-family: Poppins;
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2");
+  src: url("../fonts/Poppins-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: Inter;
+  font-family: Poppins;
   font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2");
+  src: url("../fonts/Poppins-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2");
   font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../fonts/Poppins-SemiBold.woff2") format("woff2");
+  font-weight: 600;
   font-style: normal;
 }
 /** Подключение переменных */
@@ -66,7 +80,7 @@ body {
   width: 100%;
   height: 100%;
   font-size: 16px;
-  font-family: "", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   line-height: 1;
 }
@@ -96,6 +110,7 @@ button::-moz-focus-inner {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 a:visited {
   text-decoration: none;
@@ -136,7 +151,7 @@ sup {
 */
 * {
   scrollbar-width: 0.5rem;
-  scrollbar-color: #000 #d6d6d6;
+  scrollbar-color: #5F2EEA #d6d6d6;
 }
 *::-webkit-scrollbar {
   width: 0.5rem;
@@ -150,11 +165,11 @@ sup {
 *::-webkit-scrollbar-thumb {
   border-radius: 0.25rem;
   border: 0 none #fff;
-  background-color: #1a1a1a;
+  background-color: #825cef;
   transition: all 280ms ease-in-out;
 }
 *::-webkit-scrollbar-thumb:hover {
-  background-color: #000;
+  background-color: #5F2EEA;
 }
 
 /**
@@ -237,87 +252,76 @@ sup {
   pointer-events: none;
 }
 .page_start {
-  padding-top: 6.25rem;
+  padding-top: 5.5rem;
 }
 
 /**
 * БЕМ блоки используемые во всё проекте
 */
+.logo {
+  color: #5F2EEA;
+}
+
 /**
 * Подключение стилей отдельных блоков и секций
 */
 .header {
   width: 100%;
   transition: all 0.3s ease-in-out;
-  z-index: 50;
-}
-.header-is-sticky .header {
-  position: fixed;
-  background-color: #007aff;
 }
 .header__container {
-  height: 6.25rem;
+  height: 5.5rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding-left: 8.4375rem;
+  padding-right: 4.125rem;
 }
-.header-is-sticky .header__container {
-  height: 3.125rem;
+.header__logo {
+  font-size: 2.1484375rem;
+  line-height: 3.4375rem;
 }
 
-/*
 .icon-menu {
-  display: none;
-
-  @include mediaMx(768) {
-    display: block;
-    position: relative;
-    width: rem(30);
-    height: rem(18);
-    cursor: pointer;
-    z-index: 5;
-
-    span,
-    &::before,
-    &::after {
-      content: "";
-      transition: all 300ms ease 0ms;
-      right: 0;
-      position: absolute;
-      width: 100%;
-      height: rem(2);
-      background-color: #000;
-    }
-
-    &::before {
-      top: 0;
-    }
-
-    &::after {
-      bottom: 0;
-    }
-
-    span {
-      top: calc(50% - rem(1));
-    }
-
-    .menu-open & {
-      span {
-        width: 0;
-      }
-
-      &::before {
-        top: calc(50% - rem(1));
-        transform: rotate(-45deg);
-      }
-
-      &::after {
-        bottom: calc(50% - rem(1));
-        transform: rotate(45deg);
-      }
-    }
-  }
+  display: block;
+  position: relative;
+  width: 1.75rem;
+  height: 1.125rem;
+  cursor: pointer;
+  z-index: 5;
+  background-color: inherit;
 }
-*/
+.icon-menu span, .icon-menu::before, .icon-menu::after {
+  content: "";
+  transition: all 300ms ease 0ms;
+  right: 0;
+  position: absolute;
+  width: 100%;
+  height: 0.25rem;
+  border-radius: 1.875rem;
+  background-color: #5F2EEA;
+}
+.icon-menu::before {
+  top: 0;
+}
+.icon-menu::after {
+  bottom: 0;
+}
+.icon-menu span {
+  top: calc(50% - 0.125rem);
+}
+.menu-open .icon-menu span {
+  width: 0;
+}
+.menu-open .icon-menu::before {
+  top: calc(50% - 0.125rem);
+  transform: rotate(-45deg);
+}
+.menu-open .icon-menu::after {
+  bottom: calc(50% - 0.125rem);
+  transform: rotate(45deg);
+}
+
 .popup {
   position: fixed;
   inset: 0;
@@ -502,7 +506,6 @@ sup {
 
 .footer {
   padding: 1.25rem 0;
-  background: #000;
 }
 .footer__container {
   display: flex;
