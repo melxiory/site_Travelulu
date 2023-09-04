@@ -1,7 +1,4 @@
 .accordion {
-  /** Установить свои значения */
-  $icon-size: 24;
-
   // .accordion__item
   &__item {
     /** Установить свои значения */
@@ -14,16 +11,16 @@
         /** Установить свои значения */
         background-color: $defaultBlueColor;
 
-        &:after {
-          transform: rotate(0deg);
+        &:before {
+          transform: rotate(90deg);
         }
       }
 
       .accordion__content {
         height: max-content;
-        padding-left: rem(93);
-        /** Установить свои значения */
-        padding: rem(36) 0 rem(36) rem(93);
+        & a{
+          padding: rem(36) 0 rem(36) rem(93);
+        }
       }
     }
   }
@@ -43,7 +40,7 @@
     font-weight: 600;
     line-height: rem(32); 
     letter-spacing: rem(0.75);
-    transition: background 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
 
     &:hover {
       background-color: $defaultBlueColor;
@@ -53,11 +50,13 @@
       background-color: $defaultBlueColor;
     }
 
-    @include pseudocell(after, static) {
-      transform: rotate(180deg);
-      width: rem($icon-size);
-      height: rem($icon-size);
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    @include pseudocell(before, absolute) {
+      transform: rotate(0deg);
+      top: rem(38);
+      left: rem(60);
+      width: rem(8);
+      height: rem(15);
+      background-image: url('../images/sidenav_quot.svg');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -70,10 +69,14 @@
     background-color: $defaultBlueColor;
     height: 0;
     overflow: hidden;
-    padding-left: rem(93);
-
-    /** Установить свои значения */
     
-    transition: all 0.3s ease-in-out;
+    & a{
+      padding: 0 0 0 rem(93);
+      display: block;
+      color: $inputBGColor;
+      line-height: rem(28); 
+      letter-spacing: rem(0.75);
+      transition: all 0.6s ease-in-out;
+    }
   }
 }

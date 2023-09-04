@@ -346,7 +346,7 @@ sup {
   line-height: 2rem;
   letter-spacing: 0.046875rem;
   padding: 1.875rem 0 1.875rem 5.8125rem;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 .sidenav__link:hover {
   background-color: #5F2EEA;
@@ -412,9 +412,6 @@ sup {
   border-radius: 0.5rem;
 }
 
-.accordion {
-  /** Установить свои значения */
-}
 .accordion__item {
   /** Установить свои значения */
   background-color: #2A00A2;
@@ -424,13 +421,13 @@ sup {
   /** Установить свои значения */
   background-color: #5F2EEA;
 }
-.accordion__item.open .accordion__header:after {
-  transform: rotate(0deg);
+.accordion__item.open .accordion__header:before {
+  transform: rotate(90deg);
 }
 .accordion__item.open .accordion__content {
   height: max-content;
-  padding-left: 5.8125rem;
-  /** Установить свои значения */
+}
+.accordion__item.open .accordion__content a {
   padding: 2.25rem 0 2.25rem 5.8125rem;
 }
 .accordion__header {
@@ -446,7 +443,7 @@ sup {
   font-weight: 600;
   line-height: 2rem;
   letter-spacing: 0.046875rem;
-  transition: background 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .accordion__header:hover {
   background-color: #5F2EEA;
@@ -454,13 +451,15 @@ sup {
 .accordion__header:active {
   background-color: #5F2EEA;
 }
-.accordion__header::after {
+.accordion__header::before {
   content: "";
-  position: static;
-  transform: rotate(180deg);
-  width: 1.5rem;
-  height: 1.5rem;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  position: absolute;
+  transform: rotate(0deg);
+  top: 2.375rem;
+  left: 3.75rem;
+  width: 0.5rem;
+  height: 0.9375rem;
+  background-image: url("../images/sidenav_quot.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -470,9 +469,14 @@ sup {
   background-color: #5F2EEA;
   height: 0;
   overflow: hidden;
-  padding-left: 5.8125rem;
-  /** Установить свои значения */
-  transition: all 0.3s ease-in-out;
+}
+.accordion__content a {
+  padding: 0 0 0 5.8125rem;
+  display: block;
+  color: #eff0f6;
+  line-height: 1.75rem;
+  letter-spacing: 0.046875rem;
+  transition: all 0.6s ease-in-out;
 }
 
 .footer {

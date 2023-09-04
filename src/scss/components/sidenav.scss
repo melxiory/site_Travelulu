@@ -31,7 +31,7 @@
     line-height: rem(32); 
     letter-spacing: rem(0.75);
     padding: rem(30) 0 rem(30) rem(93);
-    transition: all 0.3s;
+    transition: all 0.5s;
     &:hover{
       background-color: $defaultBlueColor;
     }
