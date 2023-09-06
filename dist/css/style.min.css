@@ -262,6 +262,14 @@ sup {
   color: #5F2EEA;
 }
 
+.button {
+  padding: 1.3125rem 4.375rem;
+  font-weight: 600;
+  line-height: 1.75rem;
+  letter-spacing: 0.046875rem;
+  border-radius: 3.125rem;
+}
+
 /**
 * Подключение стилей отдельных блоков и секций
 */
@@ -423,6 +431,80 @@ sup {
   line-height: 1.75rem;
   letter-spacing: 0.046875rem;
   transition: all 0.6s ease-in-out;
+}
+
+.hero__container {
+  position: relative;
+  padding-left: 8.4375rem;
+}
+.hero__btn-blue {
+  color: #f7f7fc;
+  background-color: #5F2EEA;
+  margin-right: 1.5625rem;
+}
+.hero__btn-white {
+  color: #5F2EEA;
+  border: 3px solid #5F2EEA;
+}
+.hero__buttons {
+  margin-bottom: 13.125rem;
+}
+.hero__head {
+  padding-top: 12.1875rem;
+}
+.hero__img {
+  position: absolute;
+  top: 0.625rem;
+  right: 0;
+}
+.hero__title {
+  position: relative;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4.125rem;
+  letter-spacing: 0.0625rem;
+  color: #4E4b66;
+  max-width: 41.875rem;
+  margin-bottom: 3.4375rem;
+  z-index: 4;
+}
+
+.hero-list__content {
+  max-width: 18.4375rem;
+  width: 100%;
+  padding-left: 3.4375rem;
+  margin: 0 auto;
+}
+.hero-list__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-list__item {
+  padding: 3.125rem 0;
+  max-width: 29.6875rem;
+  width: 100%;
+  border: 1px solid #d9dbe9;
+}
+.hero-list__number {
+  color: #2A00A2;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.125rem;
+  letter-spacing: 0.0625rem;
+  margin-bottom: 1rem;
+}
+.hero-list__number-locat {
+  position: relative;
+}
+.hero-list__number-locat::before {
+  position: absolute;
+  content: url(../images/);
+}
+.hero-list__text {
+  color: #6e7191;
+  letter-spacing: 0.046875rem;
+  line-height: 1.75rem;
 }
 
 .footer {

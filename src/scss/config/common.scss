@@ -2,3 +2,11 @@
 .logo{
   color: $defaultBlueColor;
 }
+
+.button {
+  padding: rem(21) rem(70);
+  font-weight: 600;
+  line-height: rem(28); 
+  letter-spacing: rem(0.75);
+  border-radius: rem(50);
+}
