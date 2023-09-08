@@ -79,6 +79,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "lodash": "^4.17.21",
     "swiper": "^8.4.5"
   }
 }
