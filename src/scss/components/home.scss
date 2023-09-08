@@ -165,17 +165,24 @@
 
 .gallery {
   &__container {
+    padding: 0 rem(135);
   }
   &__head {
-  }
-  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(90);
   }
   &__name {
-  }
-  &__slider {
+    margin-bottom: rem(40);
   }
   &__text {
+    color: $blackColor;
+    line-height: rem(28); 
+    letter-spacing: rem(0.75);
+    max-width: rem(435);
   }
   &__title {
+    max-width: rem(510);
   }
 }
