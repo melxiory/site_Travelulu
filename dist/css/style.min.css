@@ -646,6 +646,7 @@ sup {
 
 .gallery__container {
   padding: 0 8.4375rem;
+  margin-bottom: 7.8125rem;
 }
 .gallery__head {
   display: flex;
@@ -664,6 +665,105 @@ sup {
 }
 .gallery__title {
   max-width: 31.875rem;
+}
+
+.planning__container {
+  padding: 0 7.1875rem;
+}
+.planning__content {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 16.875rem);
+  justify-content: space-between;
+  gap: 6.875rem;
+  margin-bottom: 12.5rem;
+}
+.planning__image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.planning__name {
+  text-align: center;
+  margin-bottom: 2.1875rem;
+}
+.planning__text {
+  color: #4E4b66;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 2.125rem;
+  letter-spacing: 0.046875rem;
+}
+.planning__title {
+  max-width: 38.75rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 7.5rem;
+}
+.planning__text--one {
+  padding-left: 2.8125rem;
+  position: relative;
+}
+.planning__text--one::after {
+  content: url(../images//page_home/planning/right.svg);
+  position: absolute;
+  top: 0;
+  right: -100px;
+}
+.planning__text--two {
+  padding-right: 2.8125rem;
+  justify-self: end;
+  position: relative;
+}
+.planning__text--two::before {
+  content: url(../images//page_home/planning/left.svg);
+  position: absolute;
+  top: 0;
+  left: -100px;
+}
+.planning__text--three {
+  width: 14.375rem;
+  position: relative;
+}
+.planning__text--three::after {
+  content: url(../images//page_home/planning/right.svg);
+  position: absolute;
+  top: 0;
+  right: -100px;
+}
+.planning__text--four {
+  width: 14.375rem;
+  justify-self: end;
+  text-align: end;
+  position: relative;
+}
+.planning__text--four::before {
+  content: url(../images//page_home/planning/left.svg);
+  position: absolute;
+  top: 0;
+  left: -100px;
+}
+.planning__text--five {
+  padding-left: 2.8125rem;
+  position: relative;
+}
+.planning__text--five::after {
+  content: url(../images//page_home/planning/right.svg);
+  position: absolute;
+  top: 0;
+  right: -100px;
+}
+.planning__text--six {
+  padding-right: 2.8125rem;
+  justify-self: end;
+  position: relative;
+}
+.planning__text--six::before {
+  content: url(../images//page_home/planning/left.svg);
+  position: absolute;
+  top: 0;
+  left: -100px;
 }
 
 .footer {

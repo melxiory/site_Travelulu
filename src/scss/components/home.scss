@@ -166,6 +166,7 @@
 .gallery {
   &__container {
     padding: 0 rem(135);
+    margin-bottom: rem(125);
   }
   &__head {
     display: flex;
@@ -184,5 +185,106 @@
   }
   &__title {
     max-width: rem(510);
+  }
+}
+
+.planning {
+  &__container {
+    padding: 0 rem(115);
+  }
+  &__content {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, rem(270));
+    justify-content: space-between;
+    gap: rem(110);
+    margin-bottom: rem(200);
+  }
+  &__image{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__name {
+    text-align: center;
+    margin-bottom: rem(35);
+  }
+  &__text {
+    color: $bodyColor;
+    font-size: rem(18);
+    font-weight: 600;
+    line-height: rem(34); 
+    letter-spacing: rem(0.75);
+  }
+  &__title {
+    max-width: rem(620);
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: rem(120);
+  }
+  &__text--one{
+    padding-left: rem(45);
+    position: relative;
+    &::after{
+      content: url(../images//page_home/planning/right.svg);
+      position: absolute;
+      top: 0;
+      right: -100px;
+    }
+  }
+  &__text--two{
+    padding-right: rem(45);
+    justify-self: end;
+    position: relative;
+    &::before{
+      content: url(../images//page_home/planning/left.svg);
+      position: absolute;
+      top: 0;
+      left: -100px;
+    }
+  }
+  &__text--three{
+    width: rem(230);
+    position: relative;
+    &::after{
+      content: url(../images//page_home/planning/right.svg);
+      position: absolute;
+      top: 0;
+      right: -100px;
+    }
+  }
+  &__text--four{
+    width: rem(230);
+    justify-self: end;
+    text-align: end;
+    position: relative;
+    &::before{
+      content: url(../images//page_home/planning/left.svg);
+      position: absolute;
+      top: 0;
+      left: -100px;
+    }
+  }
+  &__text--five{
+    padding-left: rem(45);
+    position: relative;
+    &::after{
+      content: url(../images//page_home/planning/right.svg);
+      position: absolute;
+      top: 0;
+      right: -100px;
+    }
+  }
+  &__text--six{
+    padding-right: rem(45);
+    justify-self: end;
+    position: relative;
+    &::before{
+      content: url(../images//page_home/planning/left.svg);
+      position: absolute;
+      top: 0;
+      left: -100px;
+    }
   }
 }
