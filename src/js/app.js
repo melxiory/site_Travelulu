@@ -61,7 +61,6 @@ const openBtn = document.querySelector('.icon-menu')
 openBtn.addEventListener('click', 
   () => {
     sidenav.style.width = "480px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
   }
 )
 
@@ -71,6 +70,5 @@ const closeBtn = document.querySelector('.sidenav__close')
 closeBtn.addEventListener('click', 
   () => {
     sidenav.style.width = "0";
-    document.body.style.backgroundColor = "white"
   }
 )
