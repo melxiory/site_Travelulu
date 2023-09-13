@@ -368,3 +368,34 @@
     margin-bottom: rem(22);
   }
 }
+
+
+.contact {
+  &__box {
+    background-image: url(../images//page_home/contact/bg.svg);
+    border-radius: rem(30);
+    padding-top: rem(150);
+    padding-bottom: rem(96);
+  }
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    background: none;
+    border: 2px solid $OffWhiteColor;
+    color: $OffWhiteColor;
+    font-weight: 600;
+    line-height: rem(28); 
+    letter-spacing: rem(0.75);
+  }
+  &__container {
+    padding: 0 rem(135);
+    margin-bottom: rem(95);
+  }
+  &__title {
+    text-align: center;
+    max-width: rem(600);
+    margin: 0 auto;
+    color: $whiteColor;
+    margin-bottom: rem(35);
+  }
+}

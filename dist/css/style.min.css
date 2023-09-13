@@ -844,6 +844,34 @@ sup {
   margin-bottom: 1.375rem;
 }
 
+.contact__box {
+  background-image: url(../images//page_home/contact/bg.svg);
+  border-radius: 1.875rem;
+  padding-top: 9.375rem;
+  padding-bottom: 6rem;
+}
+.contact__btn {
+  display: block;
+  margin: 0 auto;
+  background: none;
+  border: 2px solid #fcfcfc;
+  color: #fcfcfc;
+  font-weight: 600;
+  line-height: 1.75rem;
+  letter-spacing: 0.046875rem;
+}
+.contact__container {
+  padding: 0 8.4375rem;
+  margin-bottom: 5.9375rem;
+}
+.contact__title {
+  text-align: center;
+  max-width: 37.5rem;
+  margin: 0 auto;
+  color: #fff;
+  margin-bottom: 2.1875rem;
+}
+
 .footer {
   padding: 1.25rem 0;
 }
