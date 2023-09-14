@@ -1,14 +1,65 @@
 .footer {
-  padding: rem(20) 0;
-
-  // .footer__container
-  &__container {
-    display: flex;
-    align-items: center;
-
     @include media(510) {
       flex-direction: column;
       align-items: flex-start;
     }
   }
+
+
+.footer {
+  &__address {
+  }
+  &__container {
+    padding: 0 rem(135);
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+  }
+  &__copyright {
+    color: $blackColor;
+    font-size: rem(13);
+    font-weight: 600;
+    line-height: rem(22);
+    letter-spacing: rem(0.25);
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+    margin-bottom: rem(45);
+  }
+  &__head {
+    max-width: rem(260);
+  }
+  &__head-text {
+    color: $blackColor;
+    font-size: rem(14);
+    line-height: rem(24); 
+    letter-spacing: rem(0.75);
+    margin-bottom: rem(20);
+  }
+  &__list-item {
+    color: $labelColor;
+    font-size: rem(14);
+    line-height: rem(24);
+    letter-spacing: rem(0.75);
+  }
+  &__mail {
+    color: $defaultBlueColor;
+  }
+  &__tel {
+  }
+  &__title{
+    color: $titleActiveColor;
+    font-size: rem(20);
+    font-weight: 600;
+    line-height: rem(32); 
+    letter-spacing: rem(0.75);
+    margin-bottom: rem(20);
+    &--color{
+      color: $defaultBlueColor;
+    }
+  }
 }
+
