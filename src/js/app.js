@@ -60,7 +60,11 @@ const openBtn = document.querySelector('.icon-menu')
 
 openBtn.addEventListener('click', 
   () => {
-    sidenav.style.width = "480px";
+    if(document.documentElement.scrollWidth < 480){
+      sidenav.style.width = `${document.documentElement.scrollWidth}px`;
+    } else {
+      sidenav.style.width = "480px";
+    }
   }
 )
 

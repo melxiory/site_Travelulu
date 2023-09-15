@@ -11,6 +11,11 @@
     justify-content: space-between;
     padding-left: rem(135);
     padding-right: rem(66);
+
+    @include media(1460){
+      padding-right: rem(66)!important;
+    }
+    
   }
   &__logo{
     font-size: rem(34.375);

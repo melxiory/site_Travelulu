@@ -347,6 +347,11 @@ sup {
   padding-left: 8.4375rem;
   padding-right: 4.125rem;
 }
+@media (max-width: 1460.98px) {
+  .header__container {
+    padding-right: 4.125rem !important;
+  }
+}
 .header__logo {
   font-size: 2.1484375rem;
   line-height: 3.4375rem;
@@ -498,13 +503,34 @@ sup {
   position: relative;
   padding-left: 8.4375rem;
 }
+@media (max-width: 1300.98px) {
+  .hero__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .hero__btn-blue {
   color: #f7f7fc;
   background-color: #5F2EEA;
   margin-right: 1.5625rem;
 }
+@media (max-width: 620.98px) {
+  .hero__btn-blue {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.25rem;
+  }
+}
 .hero__btn-white {
   color: #5F2EEA;
+}
+@media (max-width: 620.98px) {
+  .hero__btn-white {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 }
 .hero__buttons {
   margin-bottom: 13.125rem;
@@ -512,10 +538,21 @@ sup {
 .hero__head {
   padding-top: 12.1875rem;
 }
+@media (max-width: 1300.98px) {
+  .hero__head {
+    padding-top: 3.75rem;
+  }
+}
 .hero__img {
   position: absolute;
   top: 0.625rem;
   right: 0;
+}
+@media (max-width: 1300.98px) {
+  .hero__img {
+    position: relative;
+    order: -1;
+  }
 }
 .hero__title {
   position: relative;
@@ -527,6 +564,12 @@ sup {
   max-width: 41.875rem;
   margin-bottom: 3.4375rem;
   z-index: 4;
+}
+@media (max-width: 1300.98px) {
+  .hero__title {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
 }
 
 .hero-list__content {
@@ -928,4 +971,15 @@ sup {
 }
 .footer__title--color {
   color: #5F2EEA;
+}
+
+@media (max-width: 1460.98px) {
+  [class*=__container] {
+    padding: 0 calc(1.875rem + 105 * (100vw - 81.25rem) / 160);
+  }
+}
+@media (max-width: 1300.98px) {
+  [class*=__container] {
+    padding: 0 1.875rem;
+  }
 }
