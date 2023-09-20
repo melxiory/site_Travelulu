@@ -254,6 +254,10 @@
       grid-template-columns: repeat(1, rem(270));
       justify-content: center;
     }
+    @include media(500){
+      grid-template-columns: repeat(1, rem(270));
+      justify-content: end;
+    }
   }
   &__image{
     position: absolute;
@@ -300,19 +304,35 @@
         &::after{
           content: none;
         }
+        &::before{
+          content: url(../images//page_home/planning/right.svg);
+          position: absolute;
+          top: 0;
+          left: rem(-100);
+        }
       }
       &:nth-child(2n){
         padding: 0;
         padding-left: rem(45);
         &::before{
-          content: none;
+          content: url(../images//page_home/planning/right.svg);
+          position: absolute;
+          top: 0;
+          left: rem(-55);
         }
       }
-      &::before{
-        content: url(../images//page_home/planning/right.svg);
-        position: absolute;
-        top: 0;
-        left: -100px;
+    }
+    @include media(400){
+      &:nth-child(n){
+        text-align: center;
+        justify-self: center;
+        padding: 0;
+        &::after{
+          content: none;
+        }
+        &::before{
+          content: none;
+        }
       }
     }
   }
