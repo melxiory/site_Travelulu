@@ -15,3 +15,9 @@
   $result: math.div($px, 16) + em;
   @return $result;
 }
+
+// !RUBBER
+@function rubber($lowSize, $hightSize, $lowWidth: $minWidth, $hightWidth: $maxWidthContainer){
+  $result: calc(rem($lowSize) + ($hightSize - $lowSize) * ((100vw - rem($lowWidth)) / ($hightWidth - $lowWidth)));
+  @return $result;
+}

@@ -79,8 +79,15 @@ $animationSpeed: 40s;
 	}
 	
 	.slide {
-		height: 100%;
-		width: 100%;
     margin-right: rem(35);
+		@include media(1460){
+			margin-right: rubber(16, 35);
+		}
+	}
+	&__image{
+		@include media(1460){
+			width: rubber(283, 569);
+			height: rubber(304, 603);
+		}
 	}
 }

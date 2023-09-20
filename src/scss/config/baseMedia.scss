@@ -2,7 +2,7 @@
 // Для плавного уменьшения свойства padding
 [class*='__container'] {
   @include media(1460){
-    padding: 0 calc(1.875rem + (135 - 30) * ((100vw - 81.25rem) / (1460 - 1300)));
+    padding: 0 rubber(30, 135, 1300);
   }
   @include media(1300){
     padding: 0 rem(30);
