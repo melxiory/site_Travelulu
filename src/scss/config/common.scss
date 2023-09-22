@@ -41,10 +41,9 @@ $animationSpeed: 40s;
 }
 
 
-// Styling
+// Styling настройка отображения
 .slider {
 	background: white;
-	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
 	height: 100%;
 	margin: auto;
 	overflow:hidden;
@@ -90,4 +89,24 @@ $animationSpeed: 40s;
 			height: rubber(304, 603);
 		}
 	}
+}
+
+// Настройка кнопок Swyper
+.swiper-button-prev{
+	&::after{
+		content: none;
+	}
+	position: absolute;
+	z-index: 999;
+	top: rem(30);
+	left: rem(1000);
+}
+.swiper-button-next{
+	&::after{
+		content: none;
+	}
+	position: absolute;
+	z-index: 999;
+	top: rem(30);
+	left: rem(1100);
 }

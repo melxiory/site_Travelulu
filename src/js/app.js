@@ -8,8 +8,7 @@
  */
 // import MousePRLX from './libs/parallaxMouse'
 // import AOS from 'aos'
-// import Swiper, { Navigation, Pagination } from 'swiper';
-
+import Swiper from 'swiper/bundle';
 import BaseHelpers from './helpers/BaseHelpers.js';
 import PopupManager from './modules/PopupManager';
 import Accordion from './modules/Accordion.js';
@@ -76,3 +75,22 @@ closeBtn.addEventListener('click',
     sidenav.style.width = "0";
   }
 )
+
+/* Инициация и настройка Swiper*/
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: false,
+  slidesPerView: 'auto',
+  spaceBetween: 45,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
