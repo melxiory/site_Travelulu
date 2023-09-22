@@ -477,8 +477,7 @@
   &__box {
     background-image: url(../images//page_home/contact/bg.svg);
     border-radius: rem(30);
-    padding-top: rem(150);
-    padding-bottom: rem(96);
+    padding: rem(150) rem(25) rem(96);
   }
   &__btn {
     display: block;
@@ -489,6 +488,11 @@
     font-weight: 600;
     line-height: rem(28); 
     letter-spacing: rem(0.75);
+    @include media(620){
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
   }
   &__container {
     padding: 0 rem(135);

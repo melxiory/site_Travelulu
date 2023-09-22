@@ -1878,8 +1878,7 @@ button.swiper-pagination-bullet {
 .contact__box {
   background-image: url(../images//page_home/contact/bg.svg);
   border-radius: 1.875rem;
-  padding-top: 9.375rem;
-  padding-bottom: 6rem;
+  padding: 9.375rem 1.5625rem 6rem;
 }
 .contact__btn {
   display: block;
@@ -1890,6 +1889,13 @@ button.swiper-pagination-bullet {
   font-weight: 600;
   line-height: 1.75rem;
   letter-spacing: 0.046875rem;
+}
+@media (max-width: 620.98px) {
+  .contact__btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 }
 .contact__container {
   padding: 0 8.4375rem;
@@ -1925,13 +1931,37 @@ button.swiper-pagination-bullet {
   line-height: 1.375rem;
   letter-spacing: 0.015625rem;
 }
+@media (max-width: 600.98px) {
+  .footer__copyright {
+    color: #4E4b66;
+    font-weight: 400;
+  }
+}
 .footer__grid {
   display: grid;
   grid-template-columns: 40% 20% 20% 20%;
   margin-bottom: 2.8125rem;
 }
+@media (max-width: 850.98px) {
+  .footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600.98px) {
+  .footer__grid {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    text-align: center;
+    gap: 3.75rem;
+  }
+}
 .footer__head {
   max-width: 16.25rem;
+}
+@media (max-width: 600.98px) {
+  .footer__head {
+    max-width: 100%;
+  }
 }
 .footer__head-text {
   color: #000;
@@ -1939,6 +1969,11 @@ button.swiper-pagination-bullet {
   line-height: 1.5rem;
   letter-spacing: 0.046875rem;
   margin-bottom: 1.25rem;
+}
+@media (max-width: 600.98px) {
+  .footer__head-text {
+    color: #4E4b66;
+  }
 }
 .footer__list-item {
   color: #6e7191;
@@ -1959,6 +1994,31 @@ button.swiper-pagination-bullet {
 }
 .footer__title--color {
   color: #5F2EEA;
+}
+@media (max-width: 600.98px) {
+  .footer__title--color {
+    max-width: 18.75rem;
+    font-size: 2.1484375rem;
+    font-weight: 700;
+    line-height: 3.4375rem;
+    margin: 0 auto;
+    margin-bottom: 1.875rem;
+  }
+}
+@media (max-width: 850.98px) {
+  .footer__services {
+    display: none;
+  }
+}
+@media (max-width: 850.98px) {
+  .footer__continents {
+    display: none;
+  }
+}
+@media (max-width: 600.98px) {
+  .footer__address {
+    max-width: 18.75rem;
+  }
 }
 
 @media (max-width: 1460.98px) {

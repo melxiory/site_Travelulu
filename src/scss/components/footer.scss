@@ -7,8 +7,6 @@
 
 
 .footer {
-  &__address {
-  }
   &__container {
     padding: 0 rem(135);
   }
@@ -23,14 +21,30 @@
     font-weight: 600;
     line-height: rem(22);
     letter-spacing: rem(0.25);
+    @include media(600){
+      color: $bodyColor;
+      font-weight: 400;
+    }
   }
   &__grid {
     display: grid;
     grid-template-columns: 40% 20% 20% 20%;
     margin-bottom: rem(45);
+    @include media(850){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include media(600){
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      text-align: center;
+      gap: rem(60);
+    }
   }
   &__head {
     max-width: rem(260);
+    @include media(600){
+      max-width: 100%;
+    }
   }
   &__head-text {
     color: $blackColor;
@@ -38,6 +52,9 @@
     line-height: rem(24); 
     letter-spacing: rem(0.75);
     margin-bottom: rem(20);
+    @include media(600){
+      color: $bodyColor;
+    }
   }
   &__list-item {
     color: $labelColor;
@@ -48,8 +65,6 @@
   &__mail {
     color: $defaultBlueColor;
   }
-  &__tel {
-  }
   &__title{
     color: $titleActiveColor;
     font-size: rem(20);
@@ -59,6 +74,29 @@
     margin-bottom: rem(20);
     &--color{
       color: $defaultBlueColor;
+      @include media(600){
+        max-width: rem(300);
+        font-size: rem(34.375);
+        font-weight: 700;
+        line-height: rem(55);
+        margin: 0 auto;
+        margin-bottom: rem(30);
+      }
+    }
+  }
+  &__services{
+    @include media(850){
+      display: none;
+    }
+  }
+  &__continents{
+    @include media(850){
+      display: none;
+    }
+  }
+  &__address{
+    @include media(600){
+      max-width: rem(300);
     }
   }
 }
