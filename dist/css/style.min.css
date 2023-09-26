@@ -1062,6 +1062,14 @@ button.swiper-pagination-bullet {
     transform: rotate(359deg);
   }
 }
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /** Стили для полноэкранного блока: */
 /*
 * (i) Стили будут применяться ко
@@ -1276,6 +1284,24 @@ button.swiper-pagination-bullet {
   top: calc(50% - 0.125rem);
 }
 
+.sidenav-container {
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s, visibility 0s 1s;
+}
+.sidenav-container.sidenav-container--open {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s, visibility 0s;
+}
+
 .sidenav {
   height: 100%; /* 100% Полный рост */
   width: 0; /* 0 ширина - измените это с помощью JavaScript */
@@ -1321,6 +1347,19 @@ button.swiper-pagination-bullet {
   line-height: 3.4375rem;
 }
 
+.accordion__content {
+  background-color: #5F2EEA;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-in-out;
+}
+.accordion__content a {
+  padding: 2.25rem 0 2.25rem 5.8125rem;
+  display: block;
+  color: #eff0f6;
+  line-height: 1.75rem;
+  letter-spacing: 0.046875rem;
+}
 .accordion__item {
   /** Установить свои значения */
   background-color: #2A00A2;
@@ -1334,10 +1373,7 @@ button.swiper-pagination-bullet {
   transform: rotate(90deg);
 }
 .accordion__item.open .accordion__content {
-  height: max-content;
-}
-.accordion__item.open .accordion__content a {
-  padding: 2.25rem 0 2.25rem 5.8125rem;
+  max-height: 62.5rem;
 }
 .accordion__header {
   position: relative;
@@ -1373,19 +1409,6 @@ button.swiper-pagination-bullet {
   background-repeat: no-repeat;
   background-position: center;
   transition: transform 0.6s ease-in-out;
-}
-.accordion__content {
-  background-color: #5F2EEA;
-  height: 0;
-  overflow: hidden;
-}
-.accordion__content a {
-  padding: 0 0 0 5.8125rem;
-  display: block;
-  color: #eff0f6;
-  line-height: 1.75rem;
-  letter-spacing: 0.046875rem;
-  transition: all 0.6s ease-in-out;
 }
 
 .hero__container {

@@ -53,28 +53,54 @@ new Accordion('.accordion', {
 });
 
 
-/* Установить ширину боковой панели с шириной 250 пикселей и следующий */
-const sidenav = document.getElementById("mySidenav")
-const openBtn = document.querySelector('.icon-menu')
 
-openBtn.addEventListener('click', 
-  () => {
-    if(document.documentElement.scrollWidth < 480){
-      sidenav.style.width = `${document.documentElement.scrollWidth}px`;
-    } else {
-      sidenav.style.width = "480px";
-    }
+const sidenav = document.getElementById("mySidenav");
+const openBtn = document.querySelector('.icon-menu');
+const sidenavContainer = document.querySelector('.sidenav-container');
+const closeBtn = document.querySelector('.sidenav__close');
+
+
+openBtn.addEventListener('click', openSidenav);
+
+/* Установить ширину боковой панели с шириной 480 пикселей и следующий */
+function openSidenav() {
+  if(document.documentElement.scrollWidth < 480){
+    sidenav.style.width = `${document.documentElement.scrollWidth}px`;
+  } else {
+    sidenav.style.width = "480px";
+    sidenavContainer.classList.add('sidenav-container--open')
   }
-)
+  attachSidenavEvents()
+}
 
-/* Установите ширину боковой навигации в 0 */
-const closeBtn = document.querySelector('.sidenav__close')
+function attachSidenavEvents() {
+  closeBtn.addEventListener('click', closeSidenav);
+  document.addEventListener('keydown', handleEscape);
+  sidenavContainer.addEventListener('click', handleOutside)
+}
 
-closeBtn.addEventListener('click', 
-  () => {
-    sidenav.style.width = "0";
+function handleEscape(event) {
+  if(event.key === 'Escape'){
+    closeSidenav();
   }
-)
+}
+
+function handleOutside() {
+  closeSidenav()
+}
+
+function closeSidenav() {
+  sidenav.style.width = "0";
+  sidenavContainer.classList.remove('sidenav-container--open')
+  detachSidenavEvents()
+}
+
+function detachSidenavEvents() {
+  document.removeEventListener('keydown', handleEscape);
+  sidenav.removeEventListener('click', handleOutside);
+  closeBtn.removeEventListener('click', closeSidenav);
+}
+
 
 /* Инициация и настройка Swiper*/
 const swiper = new Swiper('.swiper', {
