@@ -1070,6 +1070,36 @@ button.swiper-pagination-bullet {
     opacity: 1;
   }
 }
+@-webkit-keyframes sdb03 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 1.875rem #E4DAFF;
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb03 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 1.875rem #E4DAFF;
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /** Стили для полноэкранного блока: */
 /*
 * (i) Стили будут применяться ко
@@ -2042,6 +2072,64 @@ button.swiper-pagination-bullet {
   .footer__address {
     max-width: 18.75rem;
   }
+}
+
+.scroll__link {
+  padding-top: 60px;
+  position: fixed;
+  bottom: 3.75rem;
+  right: 3.4375rem;
+  z-index: 20;
+  display: inline-block;
+  color: #5F2EEA;
+  font: normal 400 20px/1 "Poppins", sans-serif;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+.scroll__link:hover {
+  opacity: 0.5;
+}
+.scroll__body {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 2px solid #5F2EEA;
+  border-radius: 100%;
+  box-sizing: border-box;
+  transform: scaleY(-1);
+}
+.scroll__body::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 2px solid #5F2EEA;
+  border-bottom: 2px solid #5F2EEA;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+.scroll__body::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 0 0 0 #E4DAFF;
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-animation: sdb03 3s infinite;
+  animation: sdb03 3s infinite;
+  box-sizing: border-box;
 }
 
 @media (max-width: 1460.98px) {
