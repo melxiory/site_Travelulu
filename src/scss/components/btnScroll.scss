@@ -3,7 +3,7 @@
   &__link {
     padding-top: 60px;
     position: fixed;
-    bottom: rem(60);
+    bottom: rem(-100);
     right: rem(55);
     z-index: 20;
     display: inline-block;
@@ -12,8 +12,12 @@
     letter-spacing: .1em;
     text-decoration: none;
     transition: opacity .3s;
+    transition: bottom .5s ease-in-out;
     &:hover {
       opacity: .5;
+    }
+    &--close{
+      display: none;
     }
   }
   &__body {

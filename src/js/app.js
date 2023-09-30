@@ -73,60 +73,60 @@ function openSidenav() {
     sidenavContainer.classList.add('sidenav-container--open')
   }
   attachSidenavEvents()
-}
+};
 
 function attachSidenavEvents() {
   closeBtn.addEventListener('click', closeSidenav);
   document.addEventListener('keydown', handleEscape);
   sidenavContainer.addEventListener('click', handleOutside)
-}
+};
 
 function handleEscape(event) {
   if(event.key === 'Escape'){
     closeSidenav();
   }
-}
+};
 
 function handleOutside() {
   closeSidenav()
-}
+};
 
 function closeSidenav() {
   sidenav.style.width = "0";
   sidenavContainer.classList.remove('sidenav-container--open')
   detachSidenavEvents()
-}
+};
 
 function detachSidenavEvents() {
   document.removeEventListener('keydown', handleEscape);
   sidenav.removeEventListener('click', handleOutside);
   closeBtn.removeEventListener('click', closeSidenav);
-}
+};
+
+// Появление кнопки скролла
+window.addEventListener('scroll', function () {
+  const el = document.querySelector('.scroll__link')
+  const scroll = window.scrollY || document.documentElement.scrollTop;
+  if(scroll > 400){
+    el.style.bottom = '60px';
+  } else {
+    el.style.bottom = '-100px';
+  } 
+});
 
 
 /* Инициация и настройка Swiper*/
 const swiper = new Swiper('.swiper', {
-  // Optional parameters
   direction: 'horizontal',
   loop: false,
   slidesPerView: 'auto',
   spaceBetween: 45,
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-
-  // And if we need scrollbar
   scrollbar: {
     el: '.swiper-scrollbar',
   },
 });
 
-// Появление кнопки скролла
-// window.addEventListener('wheel', function() {
-//   const scroll = document.querySelector('.scroll__link')
-//   if(window.pageYOffset > 100){
-//     scroll.style.bottom = 60;
-//   }
-// })
