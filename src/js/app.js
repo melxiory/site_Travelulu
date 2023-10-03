@@ -12,7 +12,7 @@ import Swiper from 'swiper/bundle';
 import BaseHelpers from './helpers/BaseHelpers.js';
 import PopupManager from './modules/PopupManager';
 import Accordion from './modules/Accordion.js';
-import initSlowScroll from './modules/slowScroll.js';
+import customSelect from './libs/customSelect.js';
 
 BaseHelpers.checkWebpSupport();
 
@@ -60,6 +60,7 @@ const sidenav = document.getElementById("mySidenav");
 const openBtn = document.querySelector('.icon-menu');
 const sidenavContainer = document.querySelector('.sidenav-container');
 const closeBtn = document.querySelector('.sidenav__close');
+import initSlowScroll from './modules/slowScroll.js';
 
 
 openBtn.addEventListener('click', openSidenav);
@@ -113,6 +114,10 @@ window.addEventListener('scroll', function () {
     el.style.bottom = '-100px';
   } 
 });
+
+
+// Инициация модификации select
+customSelect();
 
 
 /* Инициация и настройка Swiper*/

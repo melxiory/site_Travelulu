@@ -1,0 +1,41 @@
+.search {
+  &__btn {
+    text-transform: uppercase;
+    padding: rem(10) rem(45);
+    background-color: $defaultError;
+    border-color: $defaultError;
+    color: $BGColor;
+  }
+  &__container {
+    padding: 0 rem(135);
+  }
+  &__flex {
+    padding: rem(65) 0;
+    display: flex;
+    flex-direction: column;
+    gap: rem(25);
+  }
+  &__form {
+    display: flex;
+    gap: rem(20);
+  }
+  &__select {
+    border-radius: rem(16);
+    border: rem(2) solid $titleActiveColor;
+    background: $BGColor;
+    max-width: rem(260);
+    width: 100%;
+    font-size: rem(16);
+    padding-left: rem(24);
+  }
+  &__select--country{
+    max-width: rem(480);
+  }
+  &__title {
+    color: $blackColor;
+    font-size: rem(32);
+    font-weight: 700;
+    line-height: rem(34); 
+    letter-spacing: rem(1);
+  }
+}
