@@ -57,13 +57,13 @@
 </div>
       <main class="page">
 
-        <section class="search">
-          <div class="search__container">
-            <div class="search__flex">
-              <h2 class="search__title">Find deals on hotels, homes and much more...
+        <section class="search-top">
+          <div class="search-top__container">
+            <div class="search-top__flex">
+              <h2 class="search-top__title">Find deals on hotels, homes and much more...
               </h2>
-              <form action="" class="search__form">
-                <div class="custom-select search__select--country">
+              <form action="" class="search-top__form">
+                <div class="custom-select search-top__select--country">
                   <select name="country" id="search-country" class="">
                     <option value="">Where are you going?</option>
                     <option value="Japan">Japan</option>
@@ -73,9 +73,7 @@
                     <option value="Mexico">Mexico</option>
                   </select>
                 </div>
-                <select name="check" id="check" class="search__select search__select--check">
-                  <option value="">Check-in - Check-out</option>
-                </select>
+                <input class="search-top__select" name="check" id="calendar-input" type="text" placeholder="Check-in - Check-out">
                 <div class="custom-select">
                   <select name="quant" id="quant" class="">
                     <option value="">2 adults - 0 children</option>
@@ -85,9 +83,31 @@
                     <option value="">2 adults - 3 children</option>
                   </select>
                 </div>
-                <button class="button search__btn">Search</button>
+                <button class="button search-top__btn">Search</button>
               </form>
             </div>
+          </div>
+        </section>
+
+        <section class="main-content">
+          <div class="main-content__container">
+            <h3 class="search-side__title">Search</h3>
+            <aside class="search-side">
+              <form action="" class="search-side__form">
+                <label for="destination">Destination/property name</label>
+                <select name="destination" id="search-country">
+                  <option value="">Gold Coast</option>
+                  <option value="Japan">Silver Coast</option>
+                  <option value="Chinese">Platinum Coast</option>
+                  <option value="Italy">Bronze Coast</option>
+                </select>
+                <label for="check-in">Check-in date</label>
+                <input class="search-side__select" name="check-in" id="calendar-input" type="text" placeholder="Check-in date">
+              </form>
+            </aside>
+            <section class="properties">
+
+            </section>
           </div>
         </section>
 

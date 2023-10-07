@@ -13,6 +13,7 @@ import BaseHelpers from './helpers/BaseHelpers.js';
 import PopupManager from './modules/PopupManager';
 import Accordion from './modules/Accordion.js';
 import customSelect from './libs/customSelect.js';
+import VanillaCalendar from '@uvarov.frontend/vanilla-calendar';
 
 BaseHelpers.checkWebpSupport();
 
@@ -134,4 +135,50 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-scrollbar',
   },
 });
+
+/* Инициация и настройка VanillaCalendar*/
+const options = {
+  input: true,
+  type: 'default',
+  settings: {
+    range: {
+      disablePast: true,
+    },
+    selection: {
+      day: 'multiple-ranged',
+    },
+    visibility: {
+      daysOutside: false,
+    },
+  },
+  actions: {
+    changeToInput(e, HTMLInputElement, dates, time, hours, minutes, keeping) {
+      if (dates[1]) {
+        dates.sort((a, b) => +new Date(a) - +new Date(b));
+        HTMLInputElement.value = `${dates[0]} — ${dates[dates.length - 1]}`;
+      } else if (dates[0]) {
+        HTMLInputElement.value = dates[0];
+      } else {
+        HTMLInputElement.value = '';
+      }
+    },
+  },
+};
+const calendar = new VanillaCalendar('#calendar-input', options);
+calendar.init();
+const calendarInp = document.querySelector('.vanilla-calendar-input-wrapper')
+function addCalendar () {
+  calendarInp.classList.add('vanilla-calendar-input-wrapper-open')
+}
+function removeCalendar () {
+  calendarInp.classList.remove('vanilla-calendar-input-wrapper-open')
+}
+document.addEventListener('click', function (e) {
+  if(!document.querySelector('.vanilla-calendar_hidden')){
+    addCalendar()
+  } else {
+    removeCalendar()
+  }
+})
+
 

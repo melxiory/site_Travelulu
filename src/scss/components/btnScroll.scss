@@ -1,5 +1,8 @@
 
 .scroll {
+  @include media(1300){
+    display: none;
+  }
   &__link {
     padding-top: 60px;
     position: fixed;

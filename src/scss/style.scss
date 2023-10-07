@@ -23,6 +23,9 @@
 * раскомментировать для использования
 */
 @import '../../node_modules/swiper/swiper-bundle';
+@import '../../node_modules/@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min';
+@import '../../node_modules/@uvarov.frontend/vanilla-calendar/build/themes/light.min';
+@import '../../node_modules/@uvarov.frontend/vanilla-calendar/build/themes/dark.min';
 
 /**
 * Подключение custom scrollbar для всего сайта

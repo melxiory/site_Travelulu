@@ -1,4 +1,5 @@
-.search {
+.search-top {
+  border-bottom: 1px solid $lineColor;
   &__btn {
     text-transform: uppercase;
     padding: rem(10) rem(45);
@@ -20,6 +21,8 @@
     gap: rem(20);
   }
   &__select {
+    display: block;
+    height: 100%;
     border-radius: rem(16);
     border: rem(2) solid $titleActiveColor;
     background: $BGColor;
@@ -27,6 +30,10 @@
     width: 100%;
     font-size: rem(16);
     padding-left: rem(24);
+    padding-right: rem(10);
+    &::placeholder{
+      color: $titleActiveColor;
+    }
   }
   &__select--country{
     max-width: rem(480);
