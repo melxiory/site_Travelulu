@@ -131,9 +131,6 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
 });
 
 /* Инициация и настройка VanillaCalendar*/
@@ -166,6 +163,36 @@ const options = {
 };
 const calendar = new VanillaCalendar('#calendar-input', options);
 calendar.init();
+
+const options2 = {
+  input: true,
+  type: 'default',
+  settings: {
+    range: {
+      disablePast: true,
+    },
+  },
+  actions: {
+    changeToInput(e, HTMLInputElement, dates, time, hours, minutes, keeping) {
+      if (dates[1]) {
+        dates.sort((a, b) => +new Date(a) - +new Date(b));
+        HTMLInputElement.value = `${dates[0]} — ${dates[dates.length - 1]}`;
+      } else if (dates[0]) {
+        HTMLInputElement.value = dates[0];
+      } else {
+        HTMLInputElement.value = '';
+      }
+    },
+  },
+};
+
+const calendar2 = new VanillaCalendar('#calendar-input-side-check-in', options2);
+calendar2.init();
+
+
+const calendar3 = new VanillaCalendar('#calendar-input-side-check-out', options2);
+calendar3.init();
+
 const calendarInp = document.querySelector('.vanilla-calendar-input-wrapper')
 function addCalendar () {
   calendarInp.classList.add('vanilla-calendar-input-wrapper-open')

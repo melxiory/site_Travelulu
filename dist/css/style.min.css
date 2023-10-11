@@ -2507,7 +2507,7 @@ button.swiper-pagination-bullet {
 
 .custom-select {
   position: relative;
-  max-width: 16.25rem;
+  max-width: 100%;
   width: 100%;
 }
 .custom-select select {
@@ -2517,7 +2517,8 @@ button.swiper-pagination-bullet {
 .select-selected {
   display: flex;
   align-items: center;
-  height: 100%;
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
   padding-left: 1.5rem;
   color: #14142b;
   border-radius: 1rem;
@@ -2529,7 +2530,7 @@ button.swiper-pagination-bullet {
   content: "";
   position: absolute;
   transform: rotate(0deg);
-  top: 1.125rem;
+  top: 1.375rem;
   right: 0.9375rem;
   width: 0.9375rem;
   height: 0.9375rem;
@@ -2547,6 +2548,7 @@ button.swiper-pagination-bullet {
 
 /* Style items (options): */
 .select-items {
+  margin-top: 0.3125rem;
   position: absolute;
   border-radius: 1rem;
   border: 0.125rem solid #14142b;
@@ -2576,8 +2578,9 @@ button.swiper-pagination-bullet {
 .vanilla-calendar-input-wrapper::after {
   content: "";
   position: absolute;
+  pointer-events: none;
   transform: rotate(0deg);
-  top: 1.125rem;
+  top: 1.375rem;
   right: 0.9375rem;
   width: 0.9375rem;
   height: 0.9375rem;
@@ -2589,6 +2592,10 @@ button.swiper-pagination-bullet {
 }
 .vanilla-calendar-input-wrapper-open::after {
   transform: rotate(90deg);
+}
+
+.vanilla-calendar {
+  z-index: 10;
 }
 
 /**
@@ -3450,9 +3457,13 @@ button.swiper-pagination-bullet {
   font-size: 1rem;
   padding-left: 1.5rem;
   padding-right: 0.625rem;
+  cursor: pointer;
 }
 .search-top__select::placeholder {
   color: #14142b;
+}
+.search-top__select--quant {
+  max-width: 16.25rem;
 }
 .search-top__select--country {
   max-width: 30rem;
@@ -3463,6 +3474,53 @@ button.swiper-pagination-bullet {
   font-weight: 700;
   line-height: 2.125rem;
   letter-spacing: 0.0625rem;
+}
+
+.main-content__container {
+  padding: 0 8.4375rem;
+}
+
+.search-side {
+  border-radius: 20px;
+  background-color: #2A00A2;
+  max-width: 23.125rem;
+  width: 100%;
+  padding: 2.1875rem;
+}
+.search-side__form {
+  display: flex;
+  flex-direction: column;
+}
+.search-side__label {
+  color: #F3EFFF;
+  line-height: 1.75rem;
+  letter-spacing: 0.046875rem;
+  margin-top: 0.9375rem;
+}
+.search-side__select {
+  display: block;
+  height: 100%;
+  border-radius: 1rem;
+  border: 0.125rem solid #14142b;
+  background: #f7f7fc;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.9375rem 0;
+  padding-left: 1.5rem;
+  padding-right: 0.625rem;
+  cursor: pointer;
+}
+.search-side__select::placeholder {
+  color: #14142b;
+}
+.search-side__title {
+  color: #BCA4FF;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.375rem;
+  letter-spacing: 0.046875rem;
+  margin-bottom: 1.875rem;
 }
 
 @media (max-width: 1300.98px) {

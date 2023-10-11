@@ -25,8 +25,8 @@
                     <option value="Mexico">Mexico</option>
                   </select>
                 </div>
-                <input class="search-top__select" name="check" id="calendar-input" type="text" placeholder="Check-in - Check-out"/>
-                <div class="custom-select">
+                <input class="search-top__select" name="check" id="calendar-input" type="text" placeholder="Check-in - Check-out" autocomplete="off" readonly/>
+                <div class="custom-select search-top__select--quant">
                   <select name="quant" id="quant" class="">
                     <option value="">2 adults - 0 children</option>
                     <option value="">1 adults - 0 children</option>
@@ -43,20 +43,35 @@
 
         <section class="main-content">
           <div class="main-content__container">
-            <h3 class="search-side__title">Search</h3>
             <aside class="search-side">
+              <h3 class="search-side__title">Search</h3>
               <form action="" class="search-side__form">
-                <label for="destination">Destination/property name</label>
-                <select name="destination" id="search-country">
-                  <option value="">Gold Coast</option>
-                  <option value="Japan">Silver Coast</option>
-                  <option value="Chinese">Platinum Coast</option>
-                  <option value="Italy">Bronze Coast</option>
-                </select>
-                <label for="check-in">Check-in date</label>
-                <input class="search-side__select" name="check-in" id="calendar-input" type="text" placeholder="Check-in date"/>
+                <label class="search-side__label" for="destination">Destination/property name</label>
+                <div class="custom-select">
+                  <select name="destination" id="search-destination">
+                    <option value="">Gold Coast</option>
+                    <option value="Japan">Silver Coast</option>
+                    <option value="Chinese">Platinum Coast</option>
+                    <option value="Italy">Bronze Coast</option>
+                  </select>
+                </div>
+                <label class="search-side__label"  for="check-in">Check-in date</label>
+                <input class="search-side__select" name="check-in" id="calendar-input-side-check-in" type="text" placeholder="Check-in date"autocomplete="off" readonly/>
+                <label class="search-side__label"  for="check-out">Check-out date</label>
+                <input class="search-side__select" name="check-out" id="calendar-input-side-check-out" type="text" placeholder="Check-out date"autocomplete="off" readonly/>
+                <label class="search-side__label" for="travellers">Travellers</label>
+                <div class="custom-select">
+                  <select name="travellers" id="quant" class="">
+                    <option value="">2 adults - 0 children</option>
+                    <option value="">1 adults - 0 children</option>
+                    <option value="">2 adults - 1 children</option>
+                    <option value="">2 adults - 2 children</option>
+                    <option value="">2 adults - 3 children</option>
+                  </select>
+                </div>
               </form>
             </aside>
+
             <section class="properties">
 
             </section>
