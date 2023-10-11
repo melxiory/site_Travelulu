@@ -89,6 +89,12 @@
       color: $titleActiveColor;
     }
   }
+  &__btn{
+    margin-top: rem(30);
+    background-color: $defaultError;
+    border-color: $defaultError;
+    color: $BGColor;
+  }
   &__title {
     color: $darkModeBlueColor;
     font-size: rem(24);

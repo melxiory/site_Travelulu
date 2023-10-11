@@ -3513,6 +3513,12 @@ button.swiper-pagination-bullet {
 .search-side__select::placeholder {
   color: #14142b;
 }
+.search-side__btn {
+  margin-top: 1.875rem;
+  background-color: #ED2E7E;
+  border-color: #ED2E7E;
+  color: #f7f7fc;
+}
 .search-side__title {
   color: #BCA4FF;
   font-size: 1.5rem;
