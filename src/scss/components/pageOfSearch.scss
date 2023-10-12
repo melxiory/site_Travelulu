@@ -54,7 +54,9 @@
 
 .main-content {
   &__container {
-    padding: 0 rem(135);
+    padding: rem(45) rem(135);
+    display: flex;
+    gap: rem(40);
   }
 }
 .search-side {
@@ -82,7 +84,7 @@
     width: 100%;
     font-size: rem(16);
     padding: rem(15) 0;
-    padding-left: rem(24);
+    padding-left: rem(60);
     padding-right: rem(10);
     cursor:  pointer;
     &::placeholder{

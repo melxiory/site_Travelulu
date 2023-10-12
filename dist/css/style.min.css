@@ -2515,6 +2515,7 @@ button.swiper-pagination-bullet {
 }
 
 .select-selected {
+  position: relative;
   display: flex;
   align-items: center;
   padding-top: 0.9375rem;
@@ -2530,7 +2531,7 @@ button.swiper-pagination-bullet {
   content: "";
   position: absolute;
   transform: rotate(0deg);
-  top: 1.375rem;
+  top: 1.25rem;
   right: 0.9375rem;
   width: 0.9375rem;
   height: 0.9375rem;
@@ -2539,6 +2540,23 @@ button.swiper-pagination-bullet {
   background-repeat: no-repeat;
   background-position: center;
   transition: transform 0.3s ease-in-out;
+}
+.select-selected--mod {
+  padding-left: 3.75rem;
+}
+.select-selected--mod::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 1.25rem;
+  top: 1.0625rem;
+}
+.select-selected--name::before {
+  content: url(../images/page_of_search/search-side/Search.svg);
+}
+.select-selected--travellers::before {
+  content: url(../images/page_of_search/search-side/Profile.svg);
 }
 
 /* Point the arrow upwards when the select box is open (active): */
@@ -2575,6 +2593,9 @@ button.swiper-pagination-bullet {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+.vanilla-calendar-input-wrapper {
+  position: relative;
+}
 .vanilla-calendar-input-wrapper::after {
   content: "";
   position: absolute;
@@ -2592,6 +2613,15 @@ button.swiper-pagination-bullet {
 }
 .vanilla-calendar-input-wrapper-open::after {
   transform: rotate(90deg);
+}
+.vanilla-calendar-input-wrapper--mod::before {
+  pointer-events: none;
+  position: absolute;
+  content: url(../images/page_of_search/search-side/Calandar.svg);
+  width: 100%;
+  height: 100%;
+  left: 1.25rem;
+  top: 1.0625rem;
 }
 
 .vanilla-calendar {
@@ -3477,7 +3507,9 @@ button.swiper-pagination-bullet {
 }
 
 .main-content__container {
-  padding: 0 8.4375rem;
+  padding: 2.8125rem 8.4375rem;
+  display: flex;
+  gap: 2.5rem;
 }
 
 .search-side {
@@ -3506,7 +3538,7 @@ button.swiper-pagination-bullet {
   width: 100%;
   font-size: 1rem;
   padding: 0.9375rem 0;
-  padding-left: 1.5rem;
+  padding-left: 3.75rem;
   padding-right: 0.625rem;
   cursor: pointer;
 }

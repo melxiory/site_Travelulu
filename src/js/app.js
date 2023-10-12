@@ -119,6 +119,8 @@ window.addEventListener('scroll', function () {
 
 // Инициация модификации select
 customSelect();
+document.querySelector('#search-destination').nextElementSibling.classList.add('select-selected--mod', 'select-selected--name')
+document.querySelector('#quant-side').nextElementSibling.classList.add('select-selected--mod', 'select-selected--travellers')
 
 
 /* Инициация и настройка Swiper*/
@@ -193,19 +195,26 @@ calendar2.init();
 const calendar3 = new VanillaCalendar('#calendar-input-side-check-out', options2);
 calendar3.init();
 
-const calendarInp = document.querySelector('.vanilla-calendar-input-wrapper')
-function addCalendar () {
-  calendarInp.classList.add('vanilla-calendar-input-wrapper-open')
+const calendarsInp = document.querySelectorAll('.vanilla-calendar-input-wrapper')
+function addCalendar (input) {
+  input.classList.add('vanilla-calendar-input-wrapper-open')
+};
+function removeCalendar (input) {
+  input.classList.remove('vanilla-calendar-input-wrapper-open')
+};
+
+for (let input of calendarsInp){ 
+  document.addEventListener('click', function (e) {
+    if(!input.children[1].classList.contains('vanilla-calendar_hidden')){
+      addCalendar(input)
+    } else {
+      removeCalendar(input)
+    }
+  })
 }
-function removeCalendar () {
-  calendarInp.classList.remove('vanilla-calendar-input-wrapper-open')
-}
-document.addEventListener('click', function (e) {
-  if(!document.querySelector('.vanilla-calendar_hidden')){
-    addCalendar()
-  } else {
-    removeCalendar()
-  }
-})
+
+// Добавление классов с иконкой для Check-in Check-out
+document.querySelector('#calendar-input-side-check-in').parentElement.classList.add('vanilla-calendar-input-wrapper--mod')
+document.querySelector('#calendar-input-side-check-out').parentElement.classList.add('vanilla-calendar-input-wrapper--mod')
 
 
